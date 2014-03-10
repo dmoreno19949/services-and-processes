@@ -24,6 +24,8 @@ int spawn(char* program,char** arg_list_PROG, char** arg_list){
 
 int main(){
 
+int child_status;
+
 	char* arg_list_PROG[] ={
 	"ls",
 	"-l",
@@ -39,6 +41,9 @@ int main(){
 	};
 
 	spawn(arg_list[0],arg_list_PROG ,arg_list);
+
+	wait (&child_status);
+	printf("the child process exited normally, with exit cod %d\n", WEXITSTATUS (child_status));
 
 	return 0;
 }
