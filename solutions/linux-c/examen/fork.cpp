@@ -42,8 +42,8 @@ int child_status;
 
 	spawn(arg_list[0],arg_list_PROG ,arg_list);
 
-	wait (&child_status);
-	printf("the child process exited normally, with exit cod %d\n", WEXITSTATUS (child_status));
+//	wait (&child_status);
+//	printf("the child process exited normally, with exit cod %d\n", WEXITSTATUS (child_status));
 
 	return 0;
 }
